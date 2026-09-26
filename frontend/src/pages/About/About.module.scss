@@ -1,0 +1,121 @@
+.layout {
+  display: grid;
+  gap: $sp-6;
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: $sp-8;
+    padding-block: $sp-9;
+  }
+}
+
+.toc {
+  @include card;
+  align-self: start;
+  padding: $sp-5;
+  background: $color-surface-alt;
+  box-shadow: none;
+
+  @include up(lg) {
+    position: sticky;
+    top: calc(#{$navbar-height} + #{$sp-5});
+  }
+}
+
+.tocTitle {
+  margin-bottom: $sp-3;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+.tocList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $fs-sm;
+
+  li {
+    margin-bottom: $sp-2;
+  }
+
+  a {
+    font-weight: 500;
+    color: $gray-700;
+
+    &:hover {
+      color: $navy-700;
+      text-decoration: none;
+    }
+  }
+}
+
+.content {
+  max-width: 72ch;
+}
+
+.section {
+  margin-bottom: $sp-7;
+  scroll-margin-top: calc(#{$navbar-height} + #{$sp-5});
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.heading {
+  position: relative;
+  margin-bottom: $sp-4;
+  padding-bottom: $sp-3;
+  font-size: $fs-xl;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 46px;
+    height: 3px;
+    border-radius: $radius-pill;
+    background: $gold-500;
+  }
+}
+
+.text {
+  color: $gray-700;
+}
+
+.strengths {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding-block: $sp-4;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  strong {
+    display: block;
+    color: $navy-900;
+  }
+
+  span {
+    font-size: $fs-sm;
+    color: $color-text-muted;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}

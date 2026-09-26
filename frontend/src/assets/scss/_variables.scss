@@ -1,0 +1,99 @@
+// ============================================================
+// PHOENIX BIRDS — Design tokens
+// ============================================================
+
+// --- Brand palette -----------------------------------------
+$navy-950: #050d1c;
+$navy-900: #0a1a33;
+$navy-800: #0e2445;
+$navy-700: #143059;
+$navy-600: #1b3f72;
+$navy-500: #26548f;
+
+$gold-600: #a37d10;
+$gold-500: #c9a227;
+$gold-400: #dcb944;
+$gold-100: #fdf6e0;
+
+$white: #ffffff;
+$off-white: #f7f9fc;
+$gray-100: #eef2f7;
+$gray-200: #e1e8f0;
+$gray-300: #cfd9e4;
+$gray-500: #6b7a90;
+$gray-600: #56637a;
+$gray-700: #3c4858;
+
+$success-700: #1c6b45;
+$success-50: #e8f6ef;
+$danger-700: #a12a2a;
+$danger-50: #fdeeee;
+
+// --- Semantic ----------------------------------------------
+$color-primary: $navy-800;
+$color-primary-dark: $navy-900;
+$color-accent: $gold-500;
+$color-accent-dark: $gold-600;
+$color-text: $navy-900;
+$color-text-muted: $gray-600;
+$color-border: $gray-200;
+$color-surface: $white;
+$color-surface-alt: $off-white;
+
+// --- Typography --------------------------------------------
+$font-sans: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif;
+
+$fs-xs: 0.78rem;
+$fs-sm: 0.875rem;
+$fs-base: 1rem;
+$fs-md: 1.0625rem;
+$fs-lg: 1.25rem;
+$fs-xl: 1.5rem;
+$fs-2xl: 1.875rem;
+$fs-3xl: 2.25rem;
+$fs-4xl: 2.875rem;
+
+// --- Spacing -----------------------------------------------
+$sp-1: 0.25rem;
+$sp-2: 0.5rem;
+$sp-3: 0.75rem;
+$sp-4: 1rem;
+$sp-5: 1.5rem;
+$sp-6: 2rem;
+$sp-7: 2.5rem;
+$sp-8: 3rem;
+$sp-9: 4rem;
+$sp-10: 5rem;
+
+// --- Radii / shadows / motion ------------------------------
+$radius-sm: 4px;
+$radius: 8px;
+$radius-lg: 14px;
+$radius-pill: 999px;
+
+$shadow-sm: 0 1px 2px rgba(10, 26, 51, 0.06), 0 1px 3px rgba(10, 26, 51, 0.08);
+$shadow: 0 4px 14px rgba(10, 26, 51, 0.08);
+$shadow-md: 0 10px 28px rgba(10, 26, 51, 0.12);
+$shadow-lg: 0 18px 44px rgba(10, 26, 51, 0.16);
+
+$transition-fast: 150ms ease;
+$transition: 240ms ease;
+
+// --- Layout ------------------------------------------------
+$container-max: 1180px;
+$container-narrow: 860px;
+$navbar-height: 88px;
+$mobile-bar-height: 62px;
+
+// --- Breakpoints -------------------------------------------
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+// --- z-index -----------------------------------------------
+$z-sticky-bar: 60;
+$z-float: 70;
+$z-navbar: 80;
+$z-drawer: 90;

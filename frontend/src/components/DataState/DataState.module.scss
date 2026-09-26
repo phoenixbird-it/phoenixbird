@@ -1,0 +1,51 @@
+.skeletonGrid {
+  @include auto-grid(260px);
+}
+
+.skeleton {
+  @include card;
+  padding: $sp-5;
+  box-shadow: none;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+.skeletonMedia {
+  height: 96px;
+  margin-bottom: $sp-4;
+  border-radius: $radius;
+  background: $gray-100;
+}
+
+.skeletonLine {
+  height: 12px;
+  margin-bottom: $sp-3;
+  border-radius: $radius-pill;
+  background: $gray-100;
+}
+
+.skeletonLineShort {
+  width: 60%;
+  margin-bottom: 0;
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $sp-4;
+  padding: $sp-5;
+  border: 1px solid rgba($danger-700, 0.25);
+  border-left: 4px solid $danger-700;
+  border-radius: $radius;
+  background: $danger-50;
+  color: $gray-700;
+}
+
+.empty {
+  padding: $sp-6 $sp-5;
+  border: 1px dashed $gray-300;
+  border-radius: $radius-lg;
+  background: $color-surface-alt;
+  color: $color-text-muted;
+  text-align: center;
+}

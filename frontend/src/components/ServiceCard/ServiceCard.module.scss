@@ -1,0 +1,84 @@
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &:hover {
+    @include card-hover;
+
+    .media img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.media {
+  border-radius: 0;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: $sp-5;
+}
+
+.badge {
+  align-self: flex-start;
+  margin-bottom: $sp-3;
+  padding: 2px $sp-3;
+  border: 1px solid rgba($gold-600, 0.35);
+  border-radius: $radius-pill;
+  background: $gold-100;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+.title {
+  margin-bottom: $sp-2;
+  font-size: $fs-lg;
+
+  a {
+    color: $navy-900;
+
+    &:hover {
+      color: $navy-600;
+      text-decoration: none;
+    }
+  }
+}
+
+.text {
+  margin-bottom: $sp-5;
+  color: $color-text-muted;
+  font-size: $fs-sm;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-3;
+  margin-top: auto;
+}
+
+.detailLink {
+  font-size: $fs-sm;
+  font-weight: 600;
+  color: $navy-600;
+
+  &:hover {
+    text-decoration: none;
+    color: $gold-600;
+  }
+}
+
+.cta {
+  min-height: 40px;
+  padding: $sp-2 $sp-4;
+  font-size: $fs-sm;
+}

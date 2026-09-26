@@ -1,0 +1,443 @@
+/* ---------------------------------- hero ---------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, $navy-950 0%, $navy-800 45%, $navy-600 100%);
+  color: rgba($white, 0.85);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($gold-500, 0.24) 0%, rgba($gold-500, 0) 68%);
+    pointer-events: none;
+  }
+}
+
+.heroInner {
+  position: relative;
+  display: grid;
+  gap: $sp-6;
+  padding-block: $sp-8;
+
+  @include up(md) {
+    padding-block: $sp-9;
+  }
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: $sp-7;
+    align-items: center;
+    padding-block: $sp-10;
+  }
+}
+
+.heroCopy {
+  animation: fadeInUp 520ms ease both;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  margin-bottom: $sp-4;
+  padding: $sp-1 $sp-3;
+  border: 1px solid rgba($gold-400, 0.45);
+  border-radius: $radius-pill;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gold-400;
+}
+
+.heroTitle {
+  max-width: 22ch;
+  margin-bottom: $sp-4;
+  color: $white;
+}
+
+.heroText {
+  max-width: 54ch;
+  font-size: $fs-md;
+  color: rgba($white, 0.84);
+
+  @include up(md) {
+    font-size: $fs-lg;
+  }
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}
+
+.heroPoints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-2 $sp-5;
+  margin: $sp-6 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: $fs-sm;
+  color: rgba($white, 0.72);
+
+  li {
+    position: relative;
+    padding-left: $sp-4;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $gold-400;
+      font-weight: 700;
+    }
+  }
+}
+
+.heroPanel {
+  display: none;
+
+  @include up(lg) {
+    display: block;
+    padding: $sp-6;
+    border: 1px solid rgba($white, 0.16);
+    border-radius: $radius-lg;
+    background: rgba($white, 0.06);
+    backdrop-filter: blur(2px);
+  }
+}
+
+.heroPanelInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+}
+
+.heroTag {
+  padding: $sp-2 $sp-4;
+  border: 1px solid rgba($gold-400, 0.35);
+  border-radius: $radius-pill;
+  background: rgba($navy-950, 0.35);
+  font-size: $fs-sm;
+  font-weight: 600;
+  color: rgba($white, 0.86);
+}
+
+/* --------------------------------- intro ---------------------------------- */
+
+.intro {
+  display: grid;
+  gap: $sp-6;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: $sp-8;
+  }
+}
+
+.introText {
+  max-width: 64ch;
+  color: $gray-700;
+}
+
+.introActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-4;
+  margin-top: $sp-5;
+}
+
+.quietLink {
+  font-size: $fs-sm;
+  font-weight: 700;
+  color: $navy-700;
+
+  &:hover {
+    color: $gold-600;
+    text-decoration: none;
+  }
+}
+
+.introStats {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include card;
+    margin-bottom: $sp-3;
+    padding: $sp-4 $sp-5;
+    background: $color-surface-alt;
+    box-shadow: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    display: block;
+    font-size: $fs-base;
+    color: $navy-900;
+  }
+
+  span {
+    font-size: $fs-sm;
+    color: $color-text-muted;
+  }
+}
+
+/* -------------------------------- sections -------------------------------- */
+
+.cardGrid {
+  @include auto-grid(280px);
+}
+
+.sectionFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: $sp-6;
+}
+
+.categoryRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $sp-2;
+  margin-bottom: $sp-6;
+}
+
+.categoryChip {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  min-height: 38px;
+  padding: $sp-2 $sp-4;
+  border: 1px solid $gray-300;
+  border-radius: $radius-pill;
+  background: $white;
+  font-size: $fs-sm;
+  font-weight: 600;
+  color: $gray-700;
+
+  &:hover {
+    border-color: $navy-600;
+    color: $navy-800;
+    text-decoration: none;
+  }
+}
+
+.categoryCount {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding-inline: 5px;
+  border-radius: $radius-pill;
+  background: $navy-800;
+  font-size: $fs-xs;
+  font-weight: 700;
+  color: $white;
+}
+
+/* ------------------------------- why choose ------------------------------- */
+
+.whyGrid {
+  @include auto-grid(260px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.whyCard {
+  @include card;
+  padding: $sp-5;
+
+  &:hover {
+    @include card-hover;
+  }
+}
+
+.whyMark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: $sp-4;
+  border-radius: $radius;
+  background: $gold-100;
+  color: $gold-600;
+  font-weight: 700;
+}
+
+.whyTitle {
+  margin-bottom: $sp-2;
+  font-size: $fs-md;
+}
+
+.whyText {
+  margin: 0;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}
+
+/* --------------------------------- steps ---------------------------------- */
+
+.steps {
+  display: grid;
+  gap: $sp-3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include up(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include up(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.step {
+  @include card;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+  padding: $sp-4;
+
+  &:hover {
+    @include card-hover;
+  }
+}
+
+.stepNumber {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: $navy-800;
+  color: $gold-400;
+  font-size: $fs-sm;
+  font-weight: 700;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: $fs-base;
+  line-height: 1.35;
+}
+
+/* ------------------------------- locations -------------------------------- */
+
+.locationList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $sp-3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.locationChip {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  padding: $sp-2 $sp-4;
+  border: 1px solid $gray-300;
+  border-radius: $radius-pill;
+  background: $white;
+  font-size: $fs-sm;
+  font-weight: 600;
+  color: $gray-700;
+}
+
+.locationPrimary {
+  border-color: rgba($gold-600, 0.45);
+  background: $gold-100;
+  color: $navy-900;
+}
+
+.locationFlag {
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+/* -------------------------------- contact --------------------------------- */
+
+.contact {
+  display: grid;
+  gap: $sp-6;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: $sp-8;
+    align-items: center;
+  }
+}
+
+.contactActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+}
+
+.contactList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding-block: $sp-4;
+    border-bottom: 1px solid $color-border;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    font-size: $fs-md;
+    font-weight: 700;
+  }
+}
+
+.contactLabel {
+  display: block;
+  margin-bottom: $sp-1;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+.contactAddress {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  color: $gray-700;
+}
+
+.contactFallback {
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}

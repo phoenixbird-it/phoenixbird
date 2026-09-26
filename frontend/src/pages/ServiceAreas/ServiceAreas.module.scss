@@ -1,0 +1,79 @@
+.wrap {
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    padding-block: $sp-9;
+  }
+}
+
+.block {
+  margin-bottom: $sp-7;
+}
+
+.blockTitle {
+  margin-bottom: $sp-2;
+  font-size: $fs-lg;
+}
+
+.blockText {
+  max-width: 64ch;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}
+
+.grid {
+  @include auto-grid(200px, $sp-4);
+  margin: $sp-5 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: $sp-4 $sp-5;
+
+  &:hover {
+    @include card-hover;
+  }
+}
+
+.cardPrimary {
+  border-color: rgba($gold-600, 0.4);
+  background: linear-gradient(180deg, $gold-100 0%, $white 70%);
+}
+
+.flag {
+  margin-bottom: $sp-1;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+.name {
+  font-size: $fs-md;
+  font-weight: 700;
+  color: $navy-900;
+}
+
+.state {
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}
+
+.note {
+  @include card;
+  padding: $sp-5;
+  background: $color-surface-alt;
+  box-shadow: none;
+
+  p {
+    max-width: 66ch;
+    margin-bottom: $sp-5;
+    color: $gray-700;
+  }
+}

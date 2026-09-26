@@ -1,0 +1,11 @@
+.wrap {
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    padding-block: $sp-9;
+  }
+}
+
+.grid {
+  @include auto-grid(300px);
+}

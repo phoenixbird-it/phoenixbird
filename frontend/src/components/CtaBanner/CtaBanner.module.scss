@@ -1,0 +1,55 @@
+.banner {
+  padding-block: $sp-7;
+  background: linear-gradient(120deg, $navy-900 0%, $navy-700 100%);
+  color: rgba($white, 0.85);
+
+  @include up(md) {
+    padding-block: $sp-8;
+  }
+}
+
+.inner {
+  display: grid;
+  gap: $sp-5;
+  align-items: center;
+
+  @include up(lg) {
+    grid-template-columns: 1.4fr 1fr;
+    gap: $sp-7;
+  }
+}
+
+.copy {
+  max-width: 56ch;
+}
+
+.title {
+  margin-bottom: $sp-2;
+  color: $white;
+}
+
+.text {
+  margin-bottom: 0;
+  color: rgba($white, 0.8);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-3;
+
+  @include up(lg) {
+    justify-content: flex-end;
+  }
+}
+
+.phone {
+  font-size: $fs-sm;
+  font-weight: 600;
+  color: $gold-400;
+
+  &:hover {
+    color: $white;
+  }
+}

@@ -1,0 +1,53 @@
+.hero {
+  position: relative;
+  padding-block: $sp-7;
+  background: linear-gradient(130deg, $navy-900 0%, $navy-700 62%, $navy-600 100%);
+  color: rgba($white, 0.85);
+  overflow: hidden;
+
+  @include up(md) {
+    padding-block: $sp-8;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -70px;
+    bottom: -90px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($gold-500, 0.22) 0%, rgba($gold-500, 0) 70%);
+    pointer-events: none;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: $sp-2;
+  font-size: $fs-sm;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $gold-400;
+}
+
+.title {
+  max-width: 24ch;
+  margin-bottom: $sp-3;
+  color: $white;
+}
+
+.description {
+  max-width: 62ch;
+  margin-bottom: 0;
+  font-size: $fs-md;
+  color: rgba($white, 0.82);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}

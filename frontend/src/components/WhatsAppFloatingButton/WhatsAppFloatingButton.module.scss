@@ -1,0 +1,46 @@
+.button {
+  position: fixed;
+  right: $sp-4;
+  z-index: $z-float;
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  padding: $sp-3;
+  border-radius: $radius-pill;
+  background: #25d366;
+  color: #06331a;
+  box-shadow: $shadow-md;
+  transition: transform $transition, box-shadow $transition, background-color $transition;
+
+  /* Sits above the mobile contact bar on small screens. */
+  bottom: calc(#{$mobile-bar-height} + #{$sp-4});
+
+  @include up(md) {
+    bottom: $sp-6;
+    padding: $sp-3 $sp-5;
+  }
+
+  &:hover {
+    background: #1fbc5a;
+    color: #06331a;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  flex: none;
+}
+
+.label {
+  display: none;
+  font-size: $fs-sm;
+  font-weight: 700;
+
+  @include up(md) {
+    display: inline;
+  }
+}

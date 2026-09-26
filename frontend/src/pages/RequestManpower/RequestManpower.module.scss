@@ -1,0 +1,96 @@
+.layout {
+  display: grid;
+  gap: $sp-6;
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: $sp-7;
+    padding-block: $sp-9;
+  }
+}
+
+.formPanel {
+  @include card;
+  padding: $sp-5;
+  box-shadow: $shadow;
+
+  @include up(md) {
+    padding: $sp-7;
+  }
+}
+
+.formTitle {
+  margin-bottom: $sp-5;
+  font-size: $fs-xl;
+}
+
+.successWrap {
+  padding-block: $sp-2;
+}
+
+.successActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+}
+
+.asideCard {
+  @include card;
+  padding: $sp-5;
+  background: $color-surface-alt;
+}
+
+.asideTitle {
+  margin-bottom: $sp-2;
+  font-size: $fs-md;
+}
+
+.asideText {
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}
+
+.asideList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $fs-sm;
+
+  li {
+    padding-block: $sp-2;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.asideSteps {
+  margin: 0 0 $sp-4;
+  padding-left: 1.2rem;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+
+  li {
+    margin-bottom: $sp-2;
+  }
+}
+
+.quietLink {
+  font-size: $fs-sm;
+  font-weight: 600;
+}

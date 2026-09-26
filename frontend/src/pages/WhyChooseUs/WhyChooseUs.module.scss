@@ -1,0 +1,90 @@
+.wrap {
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    padding-block: $sp-9;
+  }
+}
+
+.grid {
+  @include auto-grid(270px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  @include card;
+  position: relative;
+  padding: $sp-5;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: $gold-500;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform $transition;
+  }
+
+  &:hover {
+    @include card-hover;
+
+    &::before {
+      transform: scaleY(1);
+    }
+  }
+}
+
+.number {
+  display: block;
+  margin-bottom: $sp-2;
+  font-size: $fs-sm;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: $gold-600;
+}
+
+.title {
+  margin-bottom: $sp-2;
+  font-size: $fs-md;
+}
+
+.text {
+  margin: 0;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}
+
+.note {
+  @include card;
+  margin-top: $sp-7;
+  padding: $sp-5;
+  background: $color-surface-alt;
+  box-shadow: none;
+
+  @include up(md) {
+    padding: $sp-7;
+  }
+
+  p {
+    max-width: 72ch;
+    color: $gray-700;
+  }
+}
+
+.noteTitle {
+  font-size: $fs-xl;
+}
+
+.noteActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}

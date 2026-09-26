@@ -1,0 +1,15 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  /* Leaves room for the mobile sticky contact bar. */
+  padding-bottom: $mobile-bar-height;
+
+  @include up(md) {
+    padding-bottom: 0;
+  }
+}
+
+.main {
+  flex: 1;
+}

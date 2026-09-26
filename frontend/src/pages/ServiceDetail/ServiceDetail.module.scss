@@ -1,0 +1,169 @@
+.stateWrap {
+  padding-block: $sp-9;
+  text-align: center;
+}
+
+.stateActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}
+
+.hero {
+  background: linear-gradient(130deg, $navy-900 0%, $navy-700 100%);
+  color: rgba($white, 0.84);
+}
+
+.heroInner {
+  padding-block: $sp-6 $sp-7;
+}
+
+.breadcrumb {
+  margin-bottom: $sp-5;
+  font-size: $fs-sm;
+  color: rgba($white, 0.6);
+
+  a {
+    color: rgba($white, 0.8);
+
+    &:hover {
+      color: $gold-400;
+      text-decoration: none;
+    }
+  }
+}
+
+.heroGrid {
+  display: grid;
+  gap: $sp-6;
+  align-items: center;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: $sp-7;
+  }
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: $sp-3;
+  padding: 2px $sp-3;
+  border: 1px solid rgba($gold-400, 0.5);
+  border-radius: $radius-pill;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $gold-400;
+}
+
+.title {
+  margin-bottom: $sp-3;
+  color: $white;
+}
+
+.subtitle {
+  max-width: 58ch;
+  font-size: $fs-md;
+  color: rgba($white, 0.82);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}
+
+.heroMedia {
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+}
+
+.body {
+  display: grid;
+  gap: $sp-6;
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: $sp-7;
+    padding-block: $sp-9;
+  }
+}
+
+.content {
+  max-width: 68ch;
+
+  p {
+    color: $gray-700;
+  }
+}
+
+.processHeading {
+  margin-top: $sp-7;
+}
+
+.processList {
+  padding-left: 1.25rem;
+  color: $gray-700;
+
+  li {
+    margin-bottom: $sp-3;
+  }
+
+  strong {
+    color: $navy-900;
+  }
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+  align-self: start;
+
+  @include up(lg) {
+    position: sticky;
+    top: calc(#{$navbar-height} + #{$sp-5});
+  }
+}
+
+.asideCard {
+  @include card;
+  padding: $sp-5;
+  background: $color-surface-alt;
+}
+
+.asideTitle {
+  margin-bottom: $sp-3;
+  font-size: $fs-md;
+}
+
+.asideText {
+  margin-bottom: $sp-4;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}
+
+.asideLinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $fs-sm;
+
+  li {
+    padding-block: $sp-2;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    font-weight: 600;
+  }
+}

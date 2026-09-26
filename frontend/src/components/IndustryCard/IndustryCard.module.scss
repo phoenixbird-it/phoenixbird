@@ -1,0 +1,50 @@
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &:hover {
+    @include card-hover;
+
+    .media img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.media {
+  border-radius: 0;
+}
+
+.body {
+  padding: $sp-5;
+}
+
+.title {
+  position: relative;
+  margin-bottom: $sp-3;
+  padding-bottom: $sp-3;
+  font-size: $fs-lg;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 38px;
+    height: 3px;
+    border-radius: $radius-pill;
+    background: $gold-500;
+  }
+}
+
+.text {
+  margin-bottom: $sp-3;
+  color: $color-text-muted;
+  font-size: $fs-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

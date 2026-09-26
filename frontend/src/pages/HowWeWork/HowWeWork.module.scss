@@ -1,0 +1,124 @@
+.wrap {
+  padding-block: $sp-7;
+
+  @include up(lg) {
+    padding-block: $sp-9;
+  }
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  /* Vertical connector line. */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    bottom: 40px;
+    left: 19px;
+    width: 2px;
+    background: linear-gradient(to bottom, $gold-500, rgba($gold-500, 0.15));
+  }
+
+  @include up(lg) {
+    &::before {
+      left: 23px;
+    }
+  }
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: $sp-4;
+  padding-bottom: $sp-6;
+
+  @include up(lg) {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: $sp-5;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.marker {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $navy-800;
+  color: $gold-400;
+  font-weight: 700;
+  box-shadow: 0 0 0 4px $white;
+
+  @include up(lg) {
+    width: 48px;
+    height: 48px;
+    font-size: $fs-md;
+  }
+}
+
+.stepBody {
+  @include card;
+  padding: $sp-5;
+
+  &:hover {
+    @include card-hover;
+  }
+}
+
+.stepTitle {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+  margin-bottom: $sp-2;
+  font-size: $fs-lg;
+}
+
+.stepIndex {
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+.stepText {
+  margin: 0;
+  color: $color-text-muted;
+}
+
+.footerNote {
+  @include card;
+  margin-top: $sp-7;
+  padding: $sp-5;
+  background: $color-surface-alt;
+  box-shadow: none;
+
+  @include up(md) {
+    padding: $sp-7;
+  }
+
+  p {
+    max-width: 68ch;
+    color: $gray-700;
+  }
+}
+
+.footerTitle {
+  font-size: $fs-xl;
+}
+
+.footerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+  margin-top: $sp-5;
+}

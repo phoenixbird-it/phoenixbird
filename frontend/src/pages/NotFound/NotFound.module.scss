@@ -1,0 +1,33 @@
+.wrap {
+  padding-block: $sp-9;
+  text-align: center;
+
+  @include up(lg) {
+    padding-block: $sp-10;
+  }
+}
+
+.code {
+  display: block;
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $gold-500;
+}
+
+.title {
+  margin-top: $sp-4;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $sp-3;
+  margin-top: $sp-6;
+}
+
+.wrap :global(.lede) {
+  margin-inline: auto;
+}

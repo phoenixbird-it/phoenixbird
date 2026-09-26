@@ -1,0 +1,20 @@
+.wrap {
+  margin-bottom: $sp-6;
+}
+
+.center {
+  text-align: center;
+
+  .description {
+    margin-inline: auto;
+  }
+}
+
+.title {
+  position: relative;
+  margin-bottom: $sp-3;
+}
+
+.description {
+  margin-bottom: 0;
+}

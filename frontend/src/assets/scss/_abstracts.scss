@@ -1,0 +1,5 @@
+// Aggregated, side-effect-free tokens + mixins.
+// Auto-injected into every `*.module.scss` by vite.config.ts, so component
+// styles can use `$navy-800`, `@include up(md)` etc. without any @use line.
+@forward 'variables';
+@forward 'mixins';

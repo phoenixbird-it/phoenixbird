@@ -1,0 +1,160 @@
+/* Shared form primitives used by the Request Manpower and Contact forms. */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $sp-5;
+}
+
+.label {
+  margin-bottom: $sp-2;
+  font-size: $fs-sm;
+  font-weight: 600;
+  color: $navy-900;
+}
+
+.required {
+  color: $danger-700;
+}
+
+.hint {
+  margin: 0 0 $sp-2;
+  font-size: $fs-xs;
+  color: $color-text-muted;
+}
+
+.control {
+  width: 100%;
+  min-height: 48px;
+  padding: $sp-3 $sp-4;
+  border: 1px solid $gray-300;
+  border-radius: $radius;
+  background: $white;
+  font-size: $fs-base;
+  color: $navy-900;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &::placeholder {
+    color: $gray-500;
+  }
+
+  &:hover {
+    border-color: $gray-500;
+  }
+
+  &:focus {
+    border-color: $navy-600;
+    box-shadow: 0 0 0 3px rgba($navy-600, 0.16);
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-ring(1px);
+  }
+}
+
+textarea.control {
+  min-height: 130px;
+  resize: vertical;
+}
+
+select.control {
+  appearance: none;
+  padding-right: $sp-7;
+  background-image: linear-gradient(45deg, transparent 50%, $gray-600 50%),
+    linear-gradient(135deg, $gray-600 50%, transparent 50%);
+  background-position: calc(100% - 22px) 21px, calc(100% - 16px) 21px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.controlError {
+  border-color: $danger-700;
+  background: $danger-50;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($danger-700, 0.16);
+  }
+}
+
+.error {
+  margin: $sp-2 0 0;
+  font-size: $fs-sm;
+  font-weight: 500;
+  color: $danger-700;
+}
+
+/* --------------------------------- layout --------------------------------- */
+
+.row {
+  display: grid;
+  gap: 0 $sp-5;
+
+  @include up(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.fieldset {
+  margin-bottom: $sp-4;
+}
+
+.legend {
+  margin-bottom: $sp-4;
+  padding: 0;
+  font-size: $fs-sm;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $gold-600;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-4;
+  margin-top: $sp-5;
+}
+
+.actionsNote {
+  margin: 0;
+  font-size: $fs-xs;
+  color: $color-text-muted;
+}
+
+/* --------------------------------- alerts --------------------------------- */
+
+.alert {
+  margin-bottom: $sp-6;
+  padding: $sp-5;
+  border-radius: $radius-lg;
+  border: 1px solid transparent;
+  border-left-width: 4px;
+}
+
+.alertTitle {
+  margin-bottom: $sp-2;
+  font-size: $fs-md;
+}
+
+.alertSuccess {
+  border-color: rgba($success-700, 0.28);
+  border-left-color: $success-700;
+  background: $success-50;
+
+  .alertTitle {
+    color: $success-700;
+  }
+}
+
+.alertError {
+  border-color: rgba($danger-700, 0.28);
+  border-left-color: $danger-700;
+  background: $danger-50;
+
+  .alertTitle {
+    color: $danger-700;
+  }
+}

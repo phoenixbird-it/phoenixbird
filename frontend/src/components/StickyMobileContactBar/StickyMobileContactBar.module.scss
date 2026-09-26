@@ -1,0 +1,72 @@
+.bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-sticky-bar;
+  display: flex;
+  align-items: stretch;
+  min-height: $mobile-bar-height;
+  background: $navy-900;
+  border-top: 1px solid rgba($white, 0.12);
+  box-shadow: 0 -6px 18px rgba(5, 13, 28, 0.25);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+
+  /* Desktop relies on the navbar CTA and floating WhatsApp button instead. */
+  @include up(md) {
+    display: none;
+  }
+}
+
+.action {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: $mobile-bar-height;
+  padding: $sp-2;
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba($white, 0.86);
+  border-right: 1px solid rgba($white, 0.1);
+  transition: background-color $transition-fast;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &:hover,
+  &:active {
+    background: rgba($white, 0.08);
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.icon {
+  font-size: $fs-lg;
+  line-height: 1;
+}
+
+.whatsapp {
+  color: #6ff29b;
+
+  &:hover {
+    color: #8dffb4;
+  }
+}
+
+.primary {
+  background: $gold-500;
+  color: $navy-900;
+
+  &:hover,
+  &:active {
+    background: $gold-400;
+    color: $navy-900;
+  }
+}
